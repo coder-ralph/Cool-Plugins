@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jQuery Link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- jQueryUI Link -->
+    <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css" /> -->
+    <!-- Magnific Popup CSS CDN Link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <!-- jQuery CDN Link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Magnific Popup JS CDN Link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <!-- External CSS Link  -->
+    <link rel="stylesheet" href="style.css">
+    <title>Cool Plugins - Animals Gallery</title>
+    <script>
+        $(document).ready(function(){
+            $('.buttons').click(function(){
+                $(this).addClass('active').siblings().removeClass('active');
+                var filter = $(this).attr('data-filter')
+                if(filter == 'all'){
+                    $('.image').show(400);
+                }else{
+                    $('.image').not('.'+filter).hide(200);
+                    $('.image').filter('.'+filter).show(400);
+                }
+            });
+            $('.gallery').magnificPopup({
+        
+                delegate:'a',
+                type:'image',
+                gallery:{
+                    enabled:true
+                }
+            });
+        });
+    </script>
+</head>
+    <body>
+        <!-- Header -->
+        <header>
+            <h1>Everyone Loves Animals</h1>
+            <h2>Now Enjoy the Beauty through Stunning Images</h2>
+        </header>
+        <div class="gallery">
+            <ul class="controls">
+                <li class="buttons active" data-filter="all">all</li>
+                <li class="buttons" data-filter="dog">dog</li>
+                <li class="buttons" data-filter="cat">cat</li>
+                <li class="buttons" data-filter="horse">horse</li>
+                <li class="buttons" data-filter="bird">bird</li>
+                <li class="buttons" data-filter="panda">panda</li>
+            </ul>
+            <div class="image-container">
+                <!-- Dog Images -->
+                <a href="img/dog1.jpg" class="dog image">
+                    <img src="img/dog1.jpg" alt="dog image">
+                </a>
+                <a href="img/dog2.jpg" class="dog image">
+                    <img src="img/dog2.jpg" alt="dog image">
+                </a>
+                <a href="img/dog3.jpg" class="dog image">
+                    <img src="img/dog3.jpg" alt="dog image">
+                </a>
+                <a href="img/dog4.jpg" class="dog image">
+                    <img src="img/dog4.jpg" alt="dog image">
+                </a>
+                <a href="img/dog5.jpg" class="dog image">
+                    <img src="img/dog5.jpg" alt="dog image">
+                </a>
+                <!-- Cat Images -->
+                <a href="img/cat1.jpg" class="cat image">
+                    <img src="img/cat1.jpg" alt="at image">
+                </a>
+                <a href="img/cat2.jpg" class="cat image">
+                    <img src="img/cat2.jpg" alt="at image">
+                </a>
+                <a href="img/cat3.jpg" class="cat image">
+                    <img src="img/cat3.jpg" alt="at image">
+                </a>
+                <a href="img/cat4.jpg" class="cat image">
+                    <img src="img/cat4.jpg" alt="at image">
+                </a>
+                <a href="img/cat5.jpg" class="cat image">
+                    <img src="img/cat5.jpg" alt="at image">
+                </a>
+                <!-- Horse Images -->
+                <a href="img/horse1.jpg" class="horse image">
+                    <img src="img/horse1.jpg" alt="horse image">
+                </a>
+                <a href="img/horse2.jpg" class="horse image">
+                    <img src="img/horse2.jpg" alt="horse image">
+                </a>
+                <a href="img/horse3.jpg" class="horse image">
+                    <img src="img/horse3.jpg" alt="horse image">
+                </a>
+                <a href="img/horse4.jpg" class="horse image">
+                    <img src="img/horse4.jpg" alt="horse image">
+                </a>
+                <a href="img/horse5.jpg" class="horse image">
+                    <img src="img/horse5.jpg" alt="horse image">
+                </a>
+                <!-- Bird Images -->
+                <a href="img/bird1.jpg" class="bird image">
+                    <img src="img/bird1.jpg" alt="bird image">
+                </a>
+                <a href="img/bird2.jpg" class="bird image">
+                    <img src="img/bird2.jpg" alt="bird image">
+                </a>
+                <a href="img/bird3.jpg" class="bird image">
+                    <img src="img/bird3.jpg" alt="bird image">
+                </a>
+                <a href="img/bird4.jpg" class="bird image">
+                    <img src="img/bird4.jpg" alt="bird image">
+                </a>
+                <a href="img/bird5.jpg" class="bird image">
+                    <img src="img/bird5.jpg" alt="bird image">
+                </a>
+                <!-- Panda Images -->
+                <a href="img/panda1.jpg" class="panda image">
+                    <img src="img/panda1.jpg" alt="panda image">
+                </a>
+                <a href="img/panda2.jpg" class="panda image">
+                    <img src="img/panda2.jpg" alt="panda image">
+                </a>
+                <a href="img/panda3.jpg" class="panda image">
+                    <img src="img/panda3.jpg" alt="panda image">
+                </a>
+                <a href="img/panda4.jpg" class="panda image">
+                    <img src="img/panda4.jpg" alt="panda image">
+                </a>
+                <a href="img/panda5.jpg" class="panda image">
+                    <img src="img/panda5.jpg" alt="panda image">
+                </a>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer>
+            Made with <a href="#" target="_blank"><span>❤️</span></a> by Ralph Rosael
+        </footer>
+    </body>
+</html>
