@@ -1,4 +1,4 @@
-# Responsive Filterable Lightbox Animals Gallery Webpage
+# Responsive Filterable Lightbox Animals Gallery
 
 ## Tools Used:
 
